@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Vehicle Booking </title>
+<meta http-equiv="content-type" content="text/html; charset=UTF8"/>
+<link rel="stylesheet" type="text/css" href="css/project.css">
+
+<style>
+
+textarea#internal{
+	font-size:95%;
+	border: 3px solid black;
+	
+	}
+
+</style>
+</head>
+<body>
+<header>
+<h1> Vehicle Booking </h1>
+</header>
+
+<section>
+<form name="vehicleBooking" action="InsertPhp3.php" method="post">
+Customer_ID:<br>
+<input type="text" name="Customer_ID" pattern= "([a-zA-Z0-9]+)"> <!-- validates that input must be alpha or numeric -->
+<br><br>
+Vehicle_ID:<br>
+<input type="text" name="Vehicle_ID" pattern= "([a-zA-Z0-9]+)"> <!-- validates that input must be alpha or numeric -->
+<br><br>
+Current_Mileage:<br>
+<input type="number" name="Current_Mileage" required> <!-- validation not required as the number input type will only allow a numeric entry -->
+<br><br>
+Date_From:<br>
+<input type="date" name="Date_From" pattern= "(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"> <!-- validates that date must be entered numerically and in the format DD.MM.YYYY -->
+<br><br>
+Date_To:<br>
+<input type="Date" name="Date_To" pattern= "(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"> <!-- validates that date must be entered numerically and in the format DD.MM.YYYY -->
+<br><br>
+Cost_Per_Day:<br>
+<input type="text" name="Cost_Per_Day" pattern= "\d+(\.\d{2})?"> <!-- validates that input must be in price format of 0.00 -->
+<br><br>
+Booking_Ref:<br>
+<input type="text" name="Booking_Ref" pattern= "([a-zA-Z0-9]+)"> <!-- validates that input must be alpha or numeric -->
+<br><br>
+Driver_Required:<br>
+<input type="radio" name="Driver_Required" value="Yes" checked>Yes
+<br>
+<input type="radio" name="Driver_Required" value="No">No
+<br><br>
+Driver_ID:<br>
+<input type="text" name="Driver_ID" pattern= "([a-zA-Z0-9]+)"> <!-- validates that input must be alpha or numeric -->
+<br><br>
+Driver_Name:<br>
+<input type="text" name="Driver_Name" pattern= "([a-zA-Z\s]+)"> <!-- validates that input must be alpha -->
+<br><br>
+Phone_Number:<br>
+<input type="tel" name="Phone_Number" pattern="([0-9]+)" title="Please enter a valid phone number">
+<br><br>
+Additional_Details:<br>
+<textarea id="internal" name="Additional Details" rows=4 cols=60 wrap=virtual>
+</textarea>
+<br><br>
+<input type="submit" value="Submit">
+
+</form><br>
+
+<form name="vehicleBooking" action="Invoice.html" method="post">
+<input type="submit" value="Invoice">
+</form>
+</section>
+<ul id="clickableLink" style="list-style-type:none">
+	<li><a href="homePage.html">Return to Homepage</a> </li>
+<ul id="clickableLink" style="list-style-type:none">
+	<li><a href="SelectPhp.php">Click here to retrieve bookings</a> </li>
+</ul>
+<footer>
+<address>
+Convoy Truckers<br>
+127 Hardcourt Avenue<br>
+The Neale<br>
+Co. Mayo<br>
+Eire<br>
+094567895<br>
+<a href="mailto:convoytruckers@gmail.com">Contact</a>
+</address>
+</footer>
+</body>
+</html>

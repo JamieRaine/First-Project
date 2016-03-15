@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Customer Details </title> 
+<meta http-equiv="content-type" content="text/html; charset=UTF8"/>
+<link rel="stylesheet" type="text/css" href="css/project.css">
+</head>
+<body>
+<header>
+<h1> Customer Details </h1>
+</header>
+<section>
+<form name="customerDetails" action="InsertPhp2.php" method="post"> <!-- posts the information entered in the fields within the form tag directly into the database -->
+Customer_ID:<br>
+<input type="text" name="Customer_ID" pattern= "([a-zA-Z0-9]+)"> <!-- validates that input must be alpha or numeric -->
+<br><br>
+Customer_Name:<br>
+<input type="text" name="Customer_Name" pattern= "([a-zA-Z\s]+)"> <!-- validates that input must be alpha -->
+<br><br>
+Address:<br>
+<input type="text" name="Address" pattern= "([a-zA-Z0-9\s]+)"> <!-- validates that input must be alpha or numeric -->
+<br><br>
+Email:<br>
+<input type="email" name="Email" required> <!-- validates that an e-mail address must be entered -->
+<br><br>
+Phone_Number:<br>
+<input id="numb" type="tel" name="Phone_Number" pattern= "([0-9]+)"> <!-- validates that input must be numeric -->
+<br><br>
+<input type="submit" value="Submit Data">
+</form><br>
+
+<form name="customerDetails" action="vehicleBooking.html"> 
+<input type="submit" value="Vehicle Booking"> <!-- allows the user to navigate to the vehicleBooking webpage -->
+</form>
+</section>
+
+<ul id="clickableLink" style="list-style-type:none">
+	<li><a href="homePage.html">Return to Homepage</a> </li><br> <!-- returns the user to the company homepage -->
+</ul>
+
+<footer>
+<address>
+Convoy Truckers<br>
+127 Hardcourt Avenue<br>
+The Neale<br>
+Co. Mayo<br>
+Eire<br>
+094567895<br>
+<a href="mailto:convoytruckers@gmail.com">Contact</a>
+</address>
+</footer>
+</body>
+</html>
